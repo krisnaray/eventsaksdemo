@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+    <script>
+        const API_URL = "{{BACKEND_API_URL}}"; // This will be replaced during deployment
+        
+        async function fetchEvents() {
+            try {
+                const response = await fetch(`${API_URL}/events`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                document.getElementById('results').textContent = JSON.stringify(data, null, 2);
+                document.getElementById('status').textContent = 'Success!';
+                document.getElementById('status').style.color = 'green';
+            } catch (e) {
+                document.getElementById('status').textContent = `Error: ${e.message}`;
+                document.getElementById('status').style.color = 'red';
+                console.error(e);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>API Test Page</h1>
+    <button onclick="fetchEvents()">Fetch Events</button>
+    <p id="status">Click the button to test the API.</p>
+    <pre id="results"></pre>
+</body>
+</html>

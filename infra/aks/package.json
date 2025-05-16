@@ -1,0 +1,8 @@
+{
+    "name": "aks-deployment",
+    "version": "1.0.0",
+    "description": "Deployment scripts for AKS",
+    "scripts": {
+        "deploy": "echo \"Deploy script for AKS not yet implemented\""
+    }
+}

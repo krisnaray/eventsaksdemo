@@ -1,0 +1,8 @@
+{
+    "name": "appservice-deployment",
+    "version": "1.0.0",
+    "description": "Deployment scripts for AppService",
+    "scripts": {
+        "deploy": "echo \"Deploy script for AppService not yet implemented\""
+    }
+}

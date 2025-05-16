@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apitest
+  namespace: eventapp
+  labels:
+    app: apitest
+spec:
+  containers:
+  - name: nginx
+    image: nginx:alpine
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - name: html
+      mountPath: /usr/share/nginx/html
+  volumes:
+  - name: html
+    configMap:
+      name: apitest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: apitest
+  namespace: eventapp
+spec:
+  selector:
+    app: apitest
+  ports:
+  - port: 80
+    targetPort: 80
+  type: LoadBalancer

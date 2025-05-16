@@ -1,0 +1,41 @@
+# Ignore deployment artifacts
+main.parameters.json
+frontend-deployment-current.yaml
+*.log
+*.tmp
+
+# Ignore editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Ignore Azure connection files
+.azure/
+
+# Ignore local .env files
+.env
+*.env.local
+
+# Ignore certificates and keys
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Ignore Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore Python virtual environments
+venv/
+env/
+.env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore Docker build files
+*.tar

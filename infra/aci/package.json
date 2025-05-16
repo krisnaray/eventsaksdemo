@@ -1,0 +1,8 @@
+{
+    "name": "aci-deployment",
+    "version": "1.0.0",
+    "description": "Deployment scripts for ACI",
+    "scripts": {
+        "deploy": "echo \"Deploy script for ACI not yet implemented\""
+    }
+}

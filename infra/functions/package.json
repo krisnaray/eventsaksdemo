@@ -1,0 +1,8 @@
+{
+    "name": "functions-deployment",
+    "version": "1.0.0",
+    "description": "Deployment scripts for Azure Functions",
+    "scripts": {
+        "deploy": "echo \"Deploy script for Azure Functions not yet implemented\""
+    }
+}

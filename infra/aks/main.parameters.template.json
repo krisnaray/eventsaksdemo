@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus"
+    },
+    "aksClusterName": {
+      "value": "eventapp-aks"
+    },
+    "acrName": {
+      "value": "eventappacr"
+    },
+    "cosmosDbAccountName": {
+      "value": "eventappcosmosdb"
+    },
+    "cosmosDbDatabaseName": {
+      "value": "EventManagement"
+    },
+    "cosmosDbContainerName": {
+      "value": "Events"
+    },
+    "managedIdentityName": {
+      "value": "eventapp-identity"
+    },
+    "sshPublicKey": {
+      "value": "ssh-rsa YOUR_SSH_PUBLIC_KEY"
+    }
+  }
+}
