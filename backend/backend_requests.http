@@ -1,0 +1,33 @@
+### Variables
+@baseUrl = http://localhost:5000
+@contentType = application/json
+
+### Create a new event
+POST {{baseUrl}}/events
+Content-Type: {{contentType}}
+
+{
+  "name": "Tech Conference 2025",
+  "date": "2025-10-15",
+  "description": "Annual technology conference with various speakers and workshops."
+}
+
+### Get all events
+GET {{baseUrl}}/events
+
+### Get a specific event (replace 1 with an actual event ID)
+GET {{baseUrl}}/events/1
+
+### Update an existing event (replace 1 with an actual event ID)
+PUT {{baseUrl}}/events/1
+Content-Type: {{contentType}}
+
+{
+  "name": "Updated Tech Conference 2025",
+  "date": "2025-10-16",
+  "description": "Annual technology conference with new speakers and updated workshop schedule."
+}
+
+### Delete an event (replace 1 with an actual event ID)
+DELETE {{baseUrl}}/events/1
+
